@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You Have Been Phished!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff4e50, #f9d423);
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #000;
+    }
+
+    .warning {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: pulse 1s infinite;
+    }
+
+    .content {
+      background: rgba(0,0,0,0.5);
+      border-radius: 15px;
+      padding: 30px;
+      display: inline-block;
+      text-align: left;
+      max-width: 700px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .redirect {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #ffe600;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="warning">⚠️</div>
+  <h1>You Have Been Phished!</h1>
+
+  <div class="content">
+    <p>This was a simulated phishing test — and you took the bait.</p>
+    <p>Phishing emails are fraudulent messages designed to trick you into revealing sensitive information like usernames, passwords, or financial details. These emails often appear to come from trusted sources, but their goal is to compromise your data or gain system access.</p>
+    <p>Don’t worry — this was just a test. But it shows how easily real threats can succeed.</p>
+
+    <p class="redirect">You will now be redirected to a brief mandatory training to help you recognize and avoid phishing attacks in the future.</p>
+
+    <p>Your awareness is your best defense. Stay alert. Think before you click.</p>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://www.phishingbox.com/phishing-iq-test/quiz.php";
+    }, 8000);
+  </script>
+</body>
+</html>
