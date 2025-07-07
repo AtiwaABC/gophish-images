@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>You Have Been Phished!</title>
+
   <style>
     body {
       background: linear-gradient(to right, #ff4e50, #f9d423);
@@ -11,6 +12,35 @@
       text-align: center;
       padding: 50px;
       animation: fadeIn 2s ease-in-out;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+.background-image-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://atiwaabc.github.io/gophish-images/ABC3.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+  animation: pulse-bg 4s infinite;
+}
+
+    .badge1 {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 160px;
+      z-index: 2;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -26,7 +56,7 @@
     }
 
     .content {
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
       padding: 30px;
       display: inline-block;
@@ -59,23 +89,26 @@
   </style>
 </head>
 <body>
-  <div class="warning">⚠️</div>
-  <h1>You Have Been Phished!</h1>
+  <!-- Semi-transparent image layer -->
+  <div class="background-image-layer"></div>
 
-  <div class="content">
-    <p>This was a simulated phishing test — and you took the bait.</p>
-    <p>Phishing emails are fraudulent messages designed to trick you into revealing sensitive information like usernames, passwords, or financial details. These emails often appear to come from trusted sources, but their goal is to compromise your data or gain system access.</p>
-    <p>Don’t worry — this was just a test. But it shows how easily real threats can succeed.</p>
+  <!-- Badge/logo in top-right corner -->
+  <img src="https://atiwaabc.github.io/gophish-images/ABC1.png" alt="Badge1" class="badge1">
 
-    <p class="redirect">You will now be redirected to a brief mandatory training to help you recognize and avoid phishing attacks in the future.</p>
+  <!-- Main content -->
+  <div class="content-wrapper">
+    <div class="warning">⚠️</div>
+    <h1>You Have Been Phished!</h1>
 
-    <p>Your awareness is your best defense. Stay alert. Think before you click.</p>
+    <div class="content">
+      <p>This was a simulated phishing test — and you took the bait.</p>
+      <p>Phishing emails are fraudulent messages designed to trick you into revealing sensitive information like usernames, passwords, or financial details. These emails often appear to come from trusted sources, but their goal is to compromise your data or gain system access.</p>
+      <p>Don’t worry — this was just a test. But it shows how easily real threats can succeed.</p>
+
+      <p class="redirect">You will be contacted with a brief mandatory training to help you recognize and avoid phishing attacks in the future.</p>
+
+      <p>Your awareness is your best defense. Stay alert. Think before you click.</p>
+    </div>
   </div>
-
-  <script>
-    setTimeout(function() {
-      window.location.href = "https://www.phishingbox.com/phishing-iq-test/quiz.php";
-    }, 8000);
-  </script>
 </body>
 </html>
